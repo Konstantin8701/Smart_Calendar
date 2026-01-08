@@ -1,0 +1,128 @@
+:root {
+	--bg: #ffffff;
+	--text: #0f172a;
+	--muted: #6b7280;
+	--card: #ffffff;
+	--border: #e6e7ea;
+	--shadow: 0 6px 18px rgba(15,23,42,0.03);
+	--primary: #2563eb;
+	--primaryText: #ffffff;
+	--danger: #b91c1c;
+	--topbar: #ffffff;
+	--hover: #f8fafc;
+	--badge0: #6b7280;
+	--badge1: #2563eb;
+	--badge2: #f59e0b;
+	--chipBg: #f0f7ff;
+	--chipText: var(--text);
+	--link: #0ea5e9;
+	--success: #16a34a;
+	--info: #0ea5e9;
+	--warning: #f59e0b;
+}
+
+[data-theme="dark"] {
+	--bg: #0b1220;
+	--text: #e6eef8;
+	--muted: #94a3b8;
+	--card: #071020;
+	--border: #172033;
+	--shadow: 0 8px 24px rgba(2,6,23,0.6);
+	--primary: #3b82f6;
+	--primaryText: #062b56;
+	--danger: #fca5a5;
+	--topbar: #071022;
+	--hover: #071826;
+	--badge0: #475569;
+	--badge1: #3b82f6;
+	--badge2: #f59e0b;
+	--chipBg: rgba(59,130,246,0.06);
+	--chipText: var(--text);
+	--link: #3b82f6;
+	--success: #34d399;
+	--info: #3b82f6;
+	--warning: #f59e0b;
+}
+
+
+body, .card, .topbar, .members-table tr { transition: background-color .15s ease, color .15s ease, border-color .15s ease }
+
+.body, body { font-family: Inter, Arial, sans-serif; margin: 0; padding: 0; font-size:15px; color:var(--text); background:var(--bg) }
+
+
+.topbar { display:flex; gap:12px; padding:10px 16px; background: var(--topbar); align-items:center; box-shadow: var(--shadow); border-bottom: 1px solid var(--border) }
+.topbar a { color: var(--text); text-decoration: none }
+.topbar a:hover { text-decoration: underline }
+.app-title { font-weight:600; margin-right:12px; color:var(--text) }
+
+
+.header-username { display:inline-flex; align-items:center; gap:8px; font-size:14px; color:var(--text) }
+.avatar { width:32px; height:32px; background:var(--primary); color:var(--primaryText); display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-weight:600; flex:0 0 32px }
+
+
+.btn { font-size:14px; padding:6px 10px; border-radius:6px; border:1px solid transparent; cursor:pointer; background:transparent }
+.btn:hover { filter:brightness(0.98) }
+.btn:active { transform: translateY(1px) }
+.btn:disabled { opacity:0.6; cursor:not-allowed }
+.btn-primary { background:var(--primary); color:var(--primaryText); border-color:var(--primary) }
+.btn-secondary { background:transparent; color:var(--text); border-color:var(--border) }
+.btn-danger { background:transparent; color:var(--danger); border-color:transparent }
+
+.input, .select { padding:8px 10px; border-radius:6px; border:1px solid var(--border); background:var(--card); color:var(--text); font-size:14px }
+
+
+.card { background:var(--card); border-radius:10px; box-shadow: var(--shadow); padding:16px; border:1px solid var(--border) }
+
+
+.alert { padding:10px 12px; border-radius:6px; margin:8px 0 }
+.alert-error { background: rgba(185,28,28,0.06); color:var(--danger); border:1px solid rgba(185,28,28,0.2) }
+
+
+.members-table { width: 100%; border-collapse: collapse; }
+.auth-page { min-height: calc(100vh - 64px); display:flex; align-items:center; justify-content:center; background: var(--bg); padding: 24px }
+.auth-card { width:100%; max-width:420px; box-sizing:border-box; }
+.auth-card .card { padding: 20px 20px; border-radius:10px }
+.auth-form { display:flex; flex-direction:column; gap:10px }
+.auth-form label { font-size:13px; color:var(--muted) }
+.auth-form .input { width:100%; box-sizing:border-box }
+.btn-block { display:inline-block; width:100% }
+.auth-footer { margin-top:10px; text-align:center; font-size:14px }
+.auth-footer a { color:var(--link); text-decoration:none }
+.auth-footer a:hover { text-decoration:underline }
+.members-table th, .members-table td { padding: 10px 12px; border-bottom: 1px solid var(--border) }
+.members-table th { text-align: left; font-size:13px; color:var(--muted) }
+.members-table tbody tr:hover { background: var(--hover) }
+.members-table .actions { width:160px; text-align:right }
+.role-badge { padding: 4px 8px; border-radius: 12px; font-size: 12px; color: white; display: inline-block }
+.role-0 { background: var(--badge0) }
+.role-1 { background: var(--badge1) }
+.role-2 { background: var(--badge2) }
+
+.eventChip .title { overflow:hidden; text-overflow:ellipsis }
+.more { margin-top:4px; background:transparent; border:none; color:var(--link); cursor:pointer }
+.month-grid { display:grid; grid-template-columns: repeat(7, 1fr); gap:4px }
+.month-cell { border:1px solid var(--border); min-height:80px; padding:4px }
+.day-num { font-weight:bold }
+.badge { background:var(--border); padding:2px 6px; margin-left:8px }
+
+.events { margin-top:6px; display:flex; flex-direction:column; gap:4px }
+.eventChip { display:flex; align-items:center; gap:6px; padding:4px 6px; background:var(--chipBg); color:var(--chipText); border-radius:4px; cursor:pointer; overflow:hidden; white-space:nowrap }
+.eventChip .time { width:46px; flex:0 0 46px; font-size:12px; color:var(--muted) }
+
+
+
+
+.toast-container { position: fixed; top: 16px; right: 16px; display:flex; flex-direction:column; gap:8px; z-index: 9999 }
+.toast { display:flex; align-items:center; gap:12px; padding:10px 12px; border-radius:8px; background:var(--card); color:var(--text); border:1px solid var(--border); min-width:220px; box-shadow: var(--shadow) }
+.toast .toast-message { flex:1 }
+.toast-success { border-left: 4px solid var(--success) }
+.toast-error { border-left: 4px solid var(--danger) }
+.toast-info { border-left: 4px solid var(--info) }
+.toast-close { background:transparent; border:0; color:var(--muted); font-size:16px; cursor:pointer }
+
+
+.modal-backdrop { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background: rgba(2,6,23,0.5); z-index:10000 }
+.modal { background:var(--card); color:var(--text); border:1px solid var(--border); border-radius:10px; padding:18px; min-width:300px; max-width:90%; box-shadow:var(--shadow) }
+.modal-title { font-weight:600; margin-bottom:8px }
+.modal-body { margin-bottom:12px; color:var(--muted) }
+.modal-actions { display:flex; justify-content:flex-end; gap:8px }
